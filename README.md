@@ -11,4 +11,4 @@ This is a custom made OpenAI gym environment I've made for a boardgame I invente
 
 3) If there is a black king on any of these marked squares then the white king can capture it and vice versa.
 4) A player wins if any one of his kings reaches the other end of the board or all of the pieces of the opponent player have been captured.
-5) If 20 half-moves are played without any capture then the game ends in a draw.
+5) If 16 half-moves are played without any capture then the game ends in a draw.
