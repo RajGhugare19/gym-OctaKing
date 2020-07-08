@@ -111,6 +111,8 @@ class OctaKingEnv(gym.Env):
             self.lastcapture += 1
         self.halfmoves += 1
         (done,reward) = self.is_done()
+        if done:
+            self.reset()
         return self.state,reward,done,0
 
     def is_done(self):
@@ -125,7 +127,7 @@ class OctaKingEnv(gym.Env):
         else:
             reward = 0
             done = False
-        if self.lastcapture > 15:
+        if self.lastcapture > 16:
             done = True
             reward = 0
         return done,reward
