@@ -1,5 +1,5 @@
 # OctaKing
-This is a custom made OpenAI gym environment I've made for a boardgame I invented. Most games like chess, Go have a very large branching factor and are difficult to solve with limited rescources. While games like Tic-Tac-Toe are very trivially solved because of a very small game-tree. OctaKing is a board game which might help you fetch the best of both these worlds.
+This is a custom made OpenAI gym environment.Most games like chess, Go have a very large branching factor and are difficult to solve with limited rescources. While games like Tic-Tac-Toe are very trivially solved because of a very small game-tree. OctaKing is a board game which might help you fetch the best of both these worlds.
  
 ## Rules
 1) Each player will start the game with four kings on a 4 cross 4 board, with the black and white kings on the fourth and the first respectively.
