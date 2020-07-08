@@ -22,14 +22,14 @@ This is a custom made OpenAI gym environment I've made for a boardgame I invente
 ## Setup:
 * To setup the OctaKing package  
 ```
-    pip install -e .
+pip install -e .
 ```
 ## Imports:
 To import the environment in python
 ```
-    import gym
-    import gym_OctaKing
-    env = gym.make('OctaKing-v0')
+import gym
+import gym_OctaKing
+env = gym.make('OctaKing-v0')
 ```
 
 ## About Environment
@@ -37,19 +37,25 @@ To import the environment in python
 ### State: 
 numpy array of shape (2,4,4)                        
 ```
-      state[0] = contains the position of player 0's pieces.
-      state[1] = contains the position of player 1's pieces.
-      
-      state[player,x,y] = 1, indicates the presence of king at square (x,y)
-      state[player,x,y] = 0, indicates an empty square at (x,y)
+state[0] = contains the position of player 0's pieces.
+state[1] = contains the position of player 1's pieces.
+
+state[player,x,y] = 1, indicates the presence of king at square (x,y)
+state[player,x,y] = 0, indicates an empty square at (x,y)
 ```
 
 ### Action:
 List of size 3
 ```
-      action[0] = contains the from square of a move
-      action[1] = contains the to square of the move
-      action[2] = if the move was a capture(1) or not(0)
+action[0] = contains the from square of a move
+action[1] = contains the to square of the move
+action[2] = if the move was a capture(1) or not(0)
 ```
 
 The squares are denoted in the following way:
+```
+ 0   1  2   3                       
+ 4   5  6   7                                 
+ 8   9  10  11                            
+ 12  13 14  15                        
+ ```
