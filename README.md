@@ -1,6 +1,6 @@
 # OctaKing
-This is a custom made OpenAI gym environment I've made for a boardgame I invented. 
-
+This is a custom made OpenAI gym environment I've made for a boardgame I invented. Most games like chess, Go have a very large branching factor and are difficult to solve with limited rescources. While games like Tic-Tac-Toe are very trivially solved because of a very small game-tree. OctaKing is a board game which might help you fetch the best of both these worlds.
+ 
 ## Rules
 1) Each player will start the game with four kings on a 4 cross 4 board, with the black and white kings on the fourth and the first respectively.
 2) Kings can move in the same way they do in chess, excpet they cannot take a move in the backward direction, i.e of the 8 cardinal and inter-cardinal directions, the king can move only in five.The following image shows all 5 legal moves that a king can choose from.
@@ -12,3 +12,22 @@ This is a custom made OpenAI gym environment I've made for a boardgame I invente
 3) If there is a black king on any of these marked squares then the white king can capture it and vice versa.
 4) A player wins if any one of his kings reaches the other end of the board or all of the pieces of the opponent player have been captured.
 5) If 16 half-moves are played without any capture then the game ends in a draw.
+
+## How to install
+
+### Dependencies:
+* [Gym](https://github.com/openai/gym)
+* [Numpy](https://github.com/numpy/numpy)
+
+## Setup:
+* To setup the OctaKing package  
+```
+    pip install -e .
+```
+## Imports:
+To import the environment in python
+```
+    import gym
+    import gym_OctaKing
+    env = gym.make('OctaKing-v0')
+```
