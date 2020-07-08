@@ -31,3 +31,25 @@ To import the environment in python
     import gym_OctaKing
     env = gym.make('OctaKing-v0')
 ```
+
+## About Environment
+
+### State: 
+numpy array of shape (2,4,4)                        
+```
+      state[0] = contains the position of player 0's pieces.
+      state[1] = contains the position of player 1's pieces.
+      
+      state[player,x,y] = 1, indicates the presence of king at square (x,y)
+      state[player,x,y] = 0, indicates an empty square at (x,y)
+```
+
+### Action:
+List of size 3
+```
+      action[0] = contains the from square of a move
+      action[1] = contains the to square of the move
+      action[2] = if the move was a capture(1) or not(0)
+```
+
+The squares are denoted in the following way:
